@@ -27,13 +27,16 @@ const config = {
             template: './src/index.html',
             // favicon: './src/assets/favicon.ico',
         }),
-        // new CopyPlugin({
-        //     patterns: [
+        new CopyPlugin({
+            patterns: [
                 // { from: './src/assets/sounds/*.mp3', to:'./assets/sounds/[name][ext]'},
                 // { from: './src/js/*.json', to:'./js/[name][ext]'},
-                // { from: './src/assets/svg/*.svg', to:'./assets/svg/[name][ext]'},
-        //     ]  
-        // })
+                { from: './src/assets/Ancients/*.png', to:'./assets/Ancients/[name][ext]'},
+                { from: './src/assets/MythicCards/brown/*.png', to:'./assets/MythicCards/brown/[name][ext]'},
+                { from: './src/assets/MythicCards/green/*.png', to:'./assets/MythicCards/green/[name][ext]'},
+                { from: './src/assets/MythicCards/blue/*.png', to:'./assets/MythicCards/blue/[name][ext]'},
+            ]  
+        })
         // Add your plugins here
         // Learn more about plugins from https://webpack.js.org/configuration/plugins/
     ],
