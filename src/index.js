@@ -2,6 +2,7 @@ import './css/style.css'
 import './data/ancients.js';
 import './data/mythicCards/index.js';
 import './data/difficulties.js';
+import './assets/mythicCardBackground.png';
 import ancientsData from './data/ancients.js';
 import difficulties from './data/difficulties.js';
 import { blueCards, brownCards, greenCards } from './data/mythicCards/index.js';
@@ -87,12 +88,27 @@ genDiff.addEventListener('click', () => {
 
 
 function createElements(arr, pushElem) {
- 
-  for (let i = 0; i < arr.length; i++) {
+ let arr2 = [];
+
+ for (let i = 0; i < arr.length; i++){
+  let res = arr[getRandomNumber(0, arr.length-1)];
+  if (!arr2.includes(res)) {
+    arr2.push(res);
+  } else {
+    i--;
+  } 
+}
+
+  for (let i = 0; i < arr2.length; i++) {
     let img = document.createElement('img');
     pushElem.append(img);
     img.classList.add('card-style');
-    img.src = `${arr[i].cardFace}`
+    img.src = ``;
+    img.setAttribute('data', `${arr2[i].cardFace}`);
+
+    // console.log(img.getAttribute('data'));
+    // img.datasrc = `${arr2[i].cardFace}`;
+    // img.src = `./assets/mythicCardBackground.png`
   }
 
 }
@@ -127,9 +143,17 @@ function getCards(ancient) {
   thirdGreen.textContent = `Зеленые ${ancient.thirdStage.greenCards}`;
   thirdBrown.textContent = `Коричневые ${ancient.thirdStage.brownCards}`;
   thirdBlue.textContent = `Синие ${ancient.thirdStage.blueCards}`;
+
   console.log(firstStageArr);
   console.log(secondStageArr);
   console.log(thirdStageArr);
+  
+  let imgCards = document.querySelectorAll('.card-style');
+  imgCards.forEach(e => {
+    e.addEventListener('click', ()=> {
+      e.src = e.getAttribute('data');
+    })
+  });
 }
 
 function getFirstStageArr(ancient, arr) {

@@ -65,12 +65,18 @@ body {
     margin-bottom: 20px;
 }
 
-.card-style {   
+.card-style { 
+    cursor: pointer;  
     width: 150px;
     height: 250px;
     transform: 1s;
     border-radius: 10px;
-    border: 1px solid black;  
+    border: 1px solid black;
+    background: url('/src/assets/mythicCardBackground.png');
+}
+
+.card-style:hover {
+    border-color: red;
 }
 .stage-conteiner {
     display: flex;
