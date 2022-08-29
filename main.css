@@ -1,0 +1,139 @@
+*{
+    transition: 1s;
+}
+body {
+    /* background:url(/src/assets/home.png); */
+    /* background-repeat: round; */
+    background: black;
+}
+
+.img-style {
+    width: 300px;
+    height: 400px;
+    cursor: pointer;
+    border: 1px solid black;    
+}
+
+.img-style:hover {
+    border: 1px solid red;
+}
+.ancients-conteiner{
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.active {
+    border: 1px solid red;
+}
+.difficulties {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 10px 0px;
+}
+
+.diff {
+    cursor: pointer;
+    color: white;
+    background-color: chocolate;
+    border: 1px solid black;
+    height: 50px;
+    width: 200px;
+}
+
+.diff:hover {
+    border: 2px solid red;
+}
+
+.generate-card{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px 50px 0px;
+}
+
+.wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.name {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.card-style { 
+    cursor: pointer;  
+    width: 150px;
+    height: 250px;
+    transform: 1s;
+    border-radius: 10px;
+    border: 1px solid black;
+    background: url(assets/img/mythicCardBackground.png);
+}
+
+.card-style:hover {
+    border-color: red;
+}
+.stage-conteiner {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.first-stage {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.second-stage{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.third-stage{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.first-num {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.name-stage{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    /* margin: 10px 10px 10px 10px; */
+}
+h2 {
+    margin: 0%;
+}
+p {
+    margin: 0%;
+}
+.stage-number {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.green {
+    padding: 10px;
+    background-color: green;
+}
+.brown {
+    padding: 10px;
+    background-color: brown;
+}
+.blue {
+    padding: 10px;
+    background-color: blue;
+}
